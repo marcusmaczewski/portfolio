@@ -27,7 +27,9 @@ const Hero = (props: any) => {
                         Facebook twitter instagram
                     </div>
                     <div className={styles.lower}>
-                        Scroll down
+                        <div className={styles.scrolldown}>
+                            DOWN
+                        </div>
                     </div>
                 </div>
             </div>

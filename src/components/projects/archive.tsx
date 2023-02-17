@@ -1,3 +1,5 @@
+import SectionTitle from "../section-title";
+
 const ArchiveProjects = (props: any) => {
 
 
@@ -15,7 +17,7 @@ const ArchiveProjects = (props: any) => {
 
     return (
         <>
-            ArchiveProjects
+            <SectionTitle title="Archive" />
         </>
     );
 }

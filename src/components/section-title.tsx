@@ -14,9 +14,9 @@ const SectionTitle = (props: any) => {
 
 
     return (
-        <>
-            SectionTitle
-        </>
+        <div className="section-title">
+            <h2>{props.title}</h2>
+        </div>
     );
 }
 export default SectionTitle;
