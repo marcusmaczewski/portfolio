@@ -15,7 +15,7 @@ const Footer = (props: any) => {
 
     return (
         <>
-            Footer
+            Footer 
         </>
     );
 }
