@@ -46,10 +46,6 @@ export default function Home() {
           duration: 2000,
         })
     
-    
-    
-    
-        
       });
       
   }, [])

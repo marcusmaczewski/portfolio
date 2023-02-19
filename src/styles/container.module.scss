@@ -1,0 +1,12 @@
+@import "variables.scss";
+
+.container {
+    max-width: $xl;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+
+    &:not(:last-child){
+        margin-bottom: 150px;
+    }
+}

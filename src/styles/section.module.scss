@@ -1,0 +1,32 @@
+@import "variables.scss";
+
+.section_title{
+    margin-bottom: 40px;
+    
+    .upper{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 10px;
+
+        h2{
+            font-size: 25px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .line{
+            flex: 1;
+            flex-basis: auto;
+            height: 1px;
+            background-color: white;
+            opacity: .1;
+        }
+    }
+
+    .lower{
+        font-size: 16px;
+        color: $body_color_dark;
+    }
+}
