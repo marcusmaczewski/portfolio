@@ -42,7 +42,7 @@ const YoutubePlayer = (props: any) => {
         isListening ? (
 
             <div className={`${styles.ytplayer} ${styles.box}`}>
-                <Link href={`https://music.youtube.com/watch?v=YOzAdMs5dEc&feature=share`}>
+                <Link href={`https://music.youtube.com/watch?v=YOzAdMs5dEc&feature=share`} target="_blank">
                     <div className={`${styles.icon} ${isLoading ? styles.loading : ''}`}>
                         <Image src="/yt.png" alt="YouTube Icon" width={45} height={45} />
                     </div>
