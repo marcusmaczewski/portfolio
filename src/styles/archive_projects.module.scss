@@ -5,6 +5,10 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 
+    @media (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .single_project{
         background-color: $card_bg;
         display: grid;
@@ -23,6 +27,15 @@
                 margin-inline: auto;
                 margin-bottom: 30px;
 
+                @media (max-width: $md) {
+                    max-width: 250px;
+                    
+                    @media (max-width: $sm) {
+                        max-width: 180px;
+                    }
+
+                }
+
                 img{
                     width: 100%;
                     height: 100%;
@@ -30,6 +43,11 @@
             }
 
             .content{
+
+                @media (max-width: $sm) {
+                    text-align: center;
+                }
+
                 h3{
                     font-size: 20px;
                     margin-bottom: 10px;
