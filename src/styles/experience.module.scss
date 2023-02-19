@@ -1,0 +1,63 @@
+@import "variables.scss";
+
+.experience_list {
+    
+    .single_experience{
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 50px;
+
+        &:not(:last-child){
+            margin-bottom: 70px;
+        }
+
+        .year{
+            background-color: $card_bg;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 20px;
+
+            .year_num{
+                font-size: 40px;
+                line-height: 40px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-variant-numeric: tabular-nums;
+            }
+        }
+
+
+        .experience{
+            margin-top: 30px;
+
+            .experience_upper{
+                .experience_subtitle{
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+                }
+
+                .experience_title{
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                    font-weight: bold;
+
+                }
+            }
+
+            .experience_lower{
+                margin-top: 30px;
+
+               .experience_description{
+                    background-color: $card_bg;
+                    padding: 30px;
+                    color: $body_color_dark;
+               }
+            }
+        }
+    }
+    
+}
