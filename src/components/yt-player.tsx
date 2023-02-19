@@ -1,6 +1,9 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import styles from '../styles/page.module.scss'
+import axios from 'axios';
 
 const YoutubePlayer = (props: any) => {
 
@@ -8,11 +11,26 @@ const YoutubePlayer = (props: any) => {
     /* STATES & VARIABLES
     ------------------------------------------------------------------------ */
 
+    const [isLoading, setIsLoading] = useState(false);
+    const [isListening, setIsListening] = useState(true);
+
     let song_id = 'N7M36Azy0i0';
 
 
     /* FUNCTIONS
     ------------------------------------------------------------------------ */
+
+    useEffect(() => {
+
+        // Send axios to fetch recent or current song
+        // axios.get('/api/yt/getCurrentSong').then((res) => {
+        //     console.log(res.data);
+        //     song_id = res.data;
+        // }).catch((err) => {
+        //     console.log(err);
+        // });
+
+    }, []);
 
 
     /* RENDER
@@ -20,17 +38,23 @@ const YoutubePlayer = (props: any) => {
 
 
     return (
-        <div className={`${styles.ytplayer} ${styles.box}`}>
-            <Link href={`https://www.youtube.com/watch?v=${song_id}`}>
-                <div className={styles.icon}>
-                    <Image src="/yt.png" alt="YouTube Icon" width={45} height={45} />
+        
+        isListening ? (
+
+            <div className={`${styles.ytplayer} ${styles.box}`}>
+                <Link href={`https://music.youtube.com/watch?v=YOzAdMs5dEc&feature=share`}>
+                    <div className={`${styles.icon} ${isLoading ? styles.loading : ''}`}>
+                        <Image src="/yt.png" alt="YouTube Icon" width={45} height={45} />
+                    </div>
+                </Link>
+                <div className={styles.content}>
+                    <div className={styles.label}>Current Favorite</div>
+                    <div className={styles.value}>Homecoming (feat. Chris Martin)</div>
                 </div>
-            </Link>
-            <div className={styles.content}>
-                <div className={styles.label}>Currently Playing</div>
-                <div className={styles.value}>Alive (feat. The Moth & The Flame)</div>
             </div>
-        </div>
+
+        ) : null
+        
     );
 }
 export default YoutubePlayer;

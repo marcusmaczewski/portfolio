@@ -164,7 +164,7 @@ const MyStatus = (props: any) => {
         },
         {
             day: 'Sunday',
-            daynum: 7,
+            daynum: 0,
             times: [
                 {
                     from: 11,

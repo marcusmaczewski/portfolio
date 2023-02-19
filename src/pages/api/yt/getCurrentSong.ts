@@ -8,6 +8,13 @@ type Data = {
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
-) {
+) 
+{
+
+    const api_key = process.env.YT_API_KEY;
+
+
+
+
   res.status(200).json({ name: 'John Doe' })
 }

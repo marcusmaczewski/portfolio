@@ -77,6 +77,22 @@
                 place-items: center;
                 background-color: $card_bg_color;
                 border-radius: 50%;
+
+                &.loading{
+                    animation: loading_opacity 1s linear infinite;
+
+                    @keyframes loading_opacity {
+                        0% {
+                            opacity: 1;
+                        }
+                        50% {
+                            opacity: 0.5;
+                        }
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
 
             .label {
@@ -95,12 +111,13 @@
             top: 15px;
             left: 0;
             padding-right: 30px;
-            cursor: pointer;
+            //cursor: pointer;
             transition: all .2s;
         
             &:hover {
                 background-color: lighten($card_bg, 5%);
             }
+            
         }
 
         .mystatus{
