@@ -129,13 +129,17 @@
         }
 
         .backtotop{
-            bottom: 15px;
+            bottom: -100px;
             right: 0;
             flex-direction: row-reverse;
             text-align: right;
             padding-left: 30px;
             cursor: pointer;
             transition: all .2s;
+
+            &.show{
+                bottom: 15px;
+            }
 
             &:hover{
                 background-color: lighten($card_bg, 5%);
