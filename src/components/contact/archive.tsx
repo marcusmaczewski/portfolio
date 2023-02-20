@@ -22,8 +22,8 @@ const ArchiveContact = (props: any) => {
         <Container>
             <SectionTitle title="Contact" />
             <div className={styles.contact_list}>
-                <SingleContact label="Email" value="marcusm@outlook.dk" />
-                <SingleContact label="Discord" value="polak#1234" />
+                <SingleContact label="Email" value="Currently unavailable" />
+                <SingleContact label="Discord" value="Polak#2967" />
             </div>
         </Container>
     );
