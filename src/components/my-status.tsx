@@ -221,7 +221,7 @@ const MyStatus = (props: any) => {
     return (
         <div className={`${styles.mystatus} ${styles.box}`}>
             <div className={styles.icon}>
-                <Image src="/me.png" alt="My Icon" width={45} height={45} />
+                <Image src="/pb.png" alt="My Icon" width={45} height={45} />
             </div>
             <div className={styles.content}>
                 <div className={styles.label}>Most likely</div>
