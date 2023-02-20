@@ -107,7 +107,7 @@
 
     .ytplayer{
         top: 15px;
-        left: 0;
+        left: 15px;
         padding-right: 30px;
         //cursor: pointer;
         transition: all .2s;
@@ -124,7 +124,7 @@
 
     .mystatus{
         top: 15px;
-        right: 0;
+        right: 15px;
         flex-direction: row-reverse;
         text-align: right;
         padding-left: 30px;
@@ -136,7 +136,7 @@
 
     .backtotop{
         bottom: -100px;
-        right: 0;
+        right: 15px;
         flex-direction: row-reverse;
         text-align: right;
         padding-left: 30px;
