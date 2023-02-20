@@ -7,7 +7,7 @@
     height: 400px;
     aspect-ratio: 1;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     z-index: -10;
     opacity: 0.5;
     background: linear-gradient(
@@ -52,99 +52,105 @@
 }
 
 .alwaystop{
-    padding-inline: 15px;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+    // padding-inline: 15px;
+    // height: 100vh;
+    // width: 100vw;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // z-index: 100;
     
-    .container{
-        position: relative;
+    .box{
+        background-color: $card_bg;
+        border-radius: 50px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: fixed;
+        z-index: 1000;
 
-        .box{
-            background-color: $card_bg;
-            border-radius: 50px;
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            position: absolute;
+        .icon{
+            display: grid;
+            place-items: center;
+            background-color: $card_bg_color;
+            border-radius: 50%;
 
-            .icon{
-                display: grid;
-                place-items: center;
-                background-color: $card_bg_color;
-                border-radius: 50%;
+            &.loading{
+                animation: loading_opacity 1s linear infinite;
 
-                &.loading{
-                    animation: loading_opacity 1s linear infinite;
-
-                    @keyframes loading_opacity {
-                        0% {
-                            opacity: 1;
-                        }
-                        50% {
-                            opacity: 0.5;
-                        }
-                        100% {
-                            opacity: 1;
-                        }
+                @keyframes loading_opacity {
+                    0% {
+                        opacity: 1;
+                    }
+                    50% {
+                        opacity: 0.5;
+                    }
+                    100% {
+                        opacity: 1;
                     }
                 }
             }
-
-            .label {
-                font-size: 12px;
-                color: $body_color_dark;
-                margin-bottom: 2px;
-            }
-
-            .value {
-                font-weight: bold;
-                font-size: 14px;
-            }
         }
 
-        .ytplayer{
-            top: 15px;
-            left: 0;
-            padding-right: 30px;
-            //cursor: pointer;
-            transition: all .2s;
+        .label {
+            font-size: 12px;
+            color: $body_color_dark;
+            margin-bottom: 2px;
+        }
+
+        .value {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+
+    .ytplayer{
+        top: 15px;
+        left: 0;
+        padding-right: 30px;
+        //cursor: pointer;
+        transition: all .2s;
+
+        @media (max-width: $xs) {
+            display: none;
+        }
+    
+        &:hover {
+            background-color: lighten($card_bg, 5%);
+        }
         
-            &:hover {
-                background-color: lighten($card_bg, 5%);
-            }
-            
+    }
+
+    .mystatus{
+        top: 15px;
+        right: 0;
+        flex-direction: row-reverse;
+        text-align: right;
+        padding-left: 30px;
+    }
+
+    .backtotop{
+        bottom: -100px;
+        right: 0;
+        flex-direction: row-reverse;
+        text-align: right;
+        padding-left: 30px;
+        cursor: pointer;
+        transition: all .2s;
+
+        &.show{
+            bottom: 15px;
         }
 
-        .mystatus{
-            top: 15px;
-            right: 0;
-            flex-direction: row-reverse;
-            text-align: right;
-            padding-left: 30px;
+        &:hover{
+            background-color: lighten($card_bg, 5%);
         }
+    }
 
-        .backtotop{
-            bottom: -100px;
-            right: 0;
-            flex-direction: row-reverse;
-            text-align: right;
-            padding-left: 30px;
-            cursor: pointer;
-            transition: all .2s;
+    .container{
+        position: relative;
 
-            &.show{
-                bottom: 15px;
-            }
-
-            &:hover{
-                background-color: lighten($card_bg, 5%);
-            }
-        }
 
     }
 
@@ -163,15 +169,72 @@
     .container{
         display: grid;
         place-items: center;
+        padding-inline: 15px;
+
+        .wrapper{
+            @media (max-width: $xs) {
+                width: 100%;
+            }
+        }
 
         .upper{
+
+            @media (max-width: $xs) {
+                // text-align: left;
+            }
+            
             h1{
                 font-size: 5rem;
                 margin-bottom: 20px;
+
+                @media (max-width: $sm) {
+                    font-size: 4rem;
+
+                    @media (max-width: $xs) {
+                        font-size: 3rem;
+                        margin-bottom: 5px;
+                    }
+                }
+
             }
+
             h2{
                 font-size: 2rem;
                 font-weight: lighter;
+
+                @media (max-width: $sm) {
+                    font-size: 1.6rem;
+            
+                    @media (max-width: $xs) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+
+        .middle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+
+            .someitem{
+                background-color: $card_bg;
+                width: 50px;
+                height: 50px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                // outline: 1px solid white;
+                cursor: pointer;
+                transition: all .2s;
+
+                &:hover{
+                    background-color: lighten($card_bg, 10%);
+                }
             }
         }
 
@@ -181,6 +244,7 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
+            display: none;
 
             .scrolldown{
                 width: 50px;

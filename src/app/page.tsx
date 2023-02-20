@@ -58,11 +58,9 @@ export default function Home() {
       <div className={styles.blob}></div>
       <div className={styles.blur}></div>
       <div className={styles.alwaystop}>
-        <div className={styles.container}>
-          <YoutubePlayer />
-          <MyStatus />
-          <BackToTop />
-        </div>
+        <YoutubePlayer />
+        <MyStatus />
+        <BackToTop />
       </div>
         <Hero />
         <ArchiveProjects />

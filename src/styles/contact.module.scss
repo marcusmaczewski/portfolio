@@ -1,0 +1,28 @@
+@import "variables.scss";
+
+.single_contact{
+
+    &:not(:last-child){
+        margin-bottom: 30px;
+    }
+
+    .label{
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: $body_color_dark;
+    }
+
+    input[type="text"],
+    input[type="email"]{
+        background-color: $card_bg;
+        padding: 15px;
+        font-size: 20px;
+        border: none;
+        width: 100%;
+        color: white;
+
+        @media (max-width: $sm) {
+            font-size: 16px;
+        }
+    }
+}

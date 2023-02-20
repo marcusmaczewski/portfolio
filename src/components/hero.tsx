@@ -24,7 +24,15 @@ const Hero = (props: any) => {
                         <h2>Developer in Copenhagen, Denmark.</h2>
                     </div>
                     <div className={styles.middle}>
-                        Facebook twitter instagram
+                        <div className={styles.someitem}>
+                            FB
+                        </div>
+                        <div className={styles.someitem}>
+                            FB
+                        </div>
+                        <div className={styles.someitem}>
+                            FB
+                        </div>
                     </div>
                     <div className={styles.lower}>
                         <div className={styles.scrolldown}>
