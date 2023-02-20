@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="150" viewBox="0 0 150 150">
+  <defs>
+    <clipPath id="clip-instagram">
+      <rect width="150" height="150"/>
+    </clipPath>
+  </defs>
+  <g id="instagram" clip-path="url(#clip-instagram)">
+    <g id="instagram-round-svgrepo-com" transform="translate(143 -145)">
+      <path id="Path_2" data-name="Path 2" d="M81.254,382.226A13.2,13.2,0,1,0,68.1,369.013,13.235,13.235,0,0,0,81.254,382.226Z" transform="translate(-149.254 -149.042)" fill="#fff"/>
+      <path id="Path_3" data-name="Path 3" d="M180.715,315.215V302.5h-1.641L168,302.529l.059,12.715Z" transform="translate(-219.887 -111.357)" fill="#fff"/>
+      <path id="Path_4" data-name="Path 4" d="M60.684,382.405A20.508,20.508,0,1,1,21.191,374.7H10v30.7a7.189,7.189,0,0,0,7.178,7.178h46a7.189,7.189,0,0,0,7.178-7.178V374.7H59.16A19.863,19.863,0,0,1,60.684,382.405Z" transform="translate(-108.176 -162.405)" fill="#fff"/>
+      <path id="Path_5" data-name="Path 5" d="M-68,145a74.994,74.994,0,0,0-75,75,74.994,74.994,0,0,0,75,75A74.994,74.994,0,0,0,7,220,74.994,74.994,0,0,0-68,145Zm37.5,67.295V243A14.516,14.516,0,0,1-45,257.5H-91A14.516,14.516,0,0,1-105.5,243V196.973a14.516,14.516,0,0,1,14.5-14.5h46a14.516,14.516,0,0,1,14.5,14.5Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

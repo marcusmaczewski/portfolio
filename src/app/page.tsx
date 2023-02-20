@@ -8,12 +8,12 @@ import MyStatus from '@/components/my-status'
 import ArchiveProjects from '@/components/projects/archive'
 import ArchiveTools from '@/components/tools/archive'
 import YoutubePlayer from '@/components/yt-player'
-import { Inter } from '@next/font/google'
+import { Raleway } from '@next/font/google'
 import { useEffect } from 'react'
 import '../styles/globals.scss'
 import styles from '../styles/page.module.scss'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Raleway({ subsets: ['latin'] })
 
 export default function Home() {
 
