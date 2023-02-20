@@ -9,7 +9,7 @@ import ArchiveProjects from '@/components/projects/archive'
 import ArchiveTools from '@/components/tools/archive'
 import YoutubePlayer from '@/components/yt-player'
 import { Raleway } from '@next/font/google'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import '../styles/globals.scss'
 import styles from '../styles/page.module.scss'
 
@@ -17,13 +17,15 @@ const inter = Raleway({ subsets: ['latin'] })
 
 export default function Home() {
 
+    const [yPos , setYPos] = useState<number>(0);
+    const [xPos , setXPos] = useState<number>(0);
+    
+
     useEffect(() => {
 
-        let window_center_y = window.innerHeight / 2;
-        let window_center_x = window.innerWidth / 2;
-
-        let cursor_y_pos = 0;
-        let cursor_x_pos = 0;
+        let cursor_y_pos = yPos;
+        let cursor_x_pos = xPos;
+        
 
         // Move the BLOB position to where the cursor is, align cursor to center of BLOB
         document.addEventListener('mousemove', (e) => {
@@ -39,6 +41,11 @@ export default function Home() {
             cursor_y_pos = e.clientY - (circle_width / 2);
             cursor_x_pos = e.clientX - (circle_width / 2);
 
+            // Save last position
+            setYPos(cursor_y_pos);
+            setXPos(cursor_x_pos);
+
+
             blob.animate({
                 left: [cursor_x_pos + 'px'],
                 top: [cursor_y_pos + 'px']
@@ -48,6 +55,7 @@ export default function Home() {
             })
 
         });
+        
         
     }, [])
 
