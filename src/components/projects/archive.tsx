@@ -23,7 +23,7 @@ const ArchiveProjects = (props: any) => {
             <SectionTitle title="Projects" subtitle="A picked selection of cases I've been a part of." />
             <div className={styles.archive_list}>
                 <SingleProject title="Esportligaen.dk" content="Design & Development" customer="esportligaen"/>
-                <SingleProject title="Houseofminds.se" content="Frontend & Backend Development" customer="houseofminds"/>
+                <SingleProject title="Houseofminds" content="Frontend & Backend Development" customer="houseofminds"/>
                 <SingleProject title="Personalezonen.dk" content="Backend Development" customer="personalezonen"/>
             </div>
         </Container>

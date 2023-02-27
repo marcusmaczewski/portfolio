@@ -25,7 +25,7 @@ const ArchiveTools = (props: any) => {
                 <SingleTool icon="js" title="Javascript" />
                 <SingleTool icon="ts" title="Typescript" />
                 <SingleTool icon="php" title="PHP" />
-                <SingleTool icon="laravel" title="Laravel" />
+                {/* <SingleTool icon="laravel" title="Laravel" /> */}
                 <SingleTool icon="mysql" title="MySQL" />
                 <SingleTool icon="nodejs" title="NodeJS" />
                 <SingleTool icon="reactjs" title="React" />
